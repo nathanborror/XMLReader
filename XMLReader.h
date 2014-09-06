@@ -8,12 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-enum {
+typedef NS_ENUM(NSUInteger, XMLReaderOptions) {
     XMLReaderOptionsProcessNamespaces           = 1 << 0, // Specifies whether the receiver reports the namespace and the qualified name of an element.
     XMLReaderOptionsReportNamespacePrefixes     = 1 << 1, // Specifies whether the receiver reports the scope of namespace declarations.
     XMLReaderOptionsResolveExternalEntities     = 1 << 2, // Specifies whether the receiver reports declarations of external entities.
 };
-typedef NSUInteger XMLReaderOptions;
 
 @interface XMLReader : NSObject <NSXMLParserDelegate>
 
